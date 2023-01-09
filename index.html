@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <link rel="icon" type="image/png" href="images/LOGO_BW.png" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
@@ -24,14 +25,16 @@
         <div class="content">
           <div class="inner">
             <h1>Black wood</h1>
+            <!-- <h1>Site en cours de développement</h1> -->
             <p>Artisan aménageur</p>
           </div>
         </div>
         <nav>
           <ul>
-            <li><a href="#kbis">Extrait KBIS</a></li>
+            <li><a href="#documents">Demande de documents</a></li>
+            <!-- <li><a href="#kbis">Extrait KBIS</a></li>
             <li><a href="#assurance">Assurance</a></li>
-            <li><a href="#rib">RIB</a></li>
+            <li><a href="#rib">RIB</a></li> -->
             <li><a href="#contact">Contact</a></li>
             <!-- <li><a href="#elements">Elements</a></li> -->
           </ul>
@@ -40,33 +43,56 @@
 
       <!-- Main -->
       <div id="main">
+        <!-- documents -->
+        <article id="documents">
+          <h2 class="major">Demande de documents</h2>
+          <div class="fields">
+             <p>
+              Envoyer une demande de documents à Black Wood
+            </p>
+            <form id="rib-form" style="margin-top: 30px;">
+              <input type="checkbox" id="rib" name="rib" value="RIB" />
+              <label for="rib">RIB</label>
+              <br>
+              <input type="checkbox" id="kbis" name="kbis" value="Extrait KBIS"/>
+              <label for="kbis">Extrait KBIS</label>
+              <br>
+              <input type="checkbox" id="assurance" name="assurance" value="Attestation d'assurance"/>
+              <label for="assurance">Attestation d'assurance</label>
+              <br>
+              <br>
+              <input type="hidden" name="contact_number" id="contact_number">
+              <ul class="actions">
+                <li style="width: 100%;">
+                  <input type="email" placeholder="Votre adresse mail" name="email_address" class="primary" required/>
+                </li>
+                <li><input type="submit" class="primary" value="Envoyer la demande"/></li>
+              </ul>
+            </form>
+            <span id="mail_success" class="text-success" style="display: none;"><i class="fas fa-check" style="margin-right: 10px;"></i> Demande envoyée avec succès</span>
+            <span id="mail_error" class="text-danger" style="display: none;"><i class="fas fa-times" style="margin-right: 10px;"></i> Echec de l'envoi de la demande</span>
+            </div>
+        </article>
+
         <!-- kbis -->
         <article id="kbis">
           <h2 class="major">kbis</h2>
-          <!-- <embed
-            src="assets/file/GRF-KBIS.PDF"
+          <embed
+            src="assets/file/GRF-KBIS_1.PDF"
             type="application/pdf"
             width="100%"
             height="700"
-          /> -->
-          <object
-            data="assets/file/GRF-KBIS.PDF"
-            type="application/pdf"
-            width="100%"
-            height="700"
+            style="background-color: #fff;"
             aria-labelledby="PDF document"
           >
-            <p>
-              Your browser does not support PDFs.
-              <a href="assets/file/GRF-KBIS.PDF">Download the PDF</a>
-            </p>
-          </object>
+          </embed>
+          <a href="assets/file/GRF-KBIS_1.PDF" target="_blank">Télécharger le document</a>
         </article>
 
         <!-- assurance -->
         <article id="assurance">
           <h2 class="major">assurance</h2>
-          <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+          <span class="image main"><img src="images/pic02.jpg" alt="placeholder" /></span>
         </article>
 
         <!-- rib -->
@@ -80,7 +106,7 @@
               <input type="hidden" name="contact_number" id="contact_number">
               <ul class="actions">
                 <li style="width: 100%;">
-                  <input type="email" placeholder="Adresse mail" name="email_address" class="primary" required/>
+                  <input type="email" placeholder="Votre adresse mail" name="email_address" class="primary" required/>
                 </li>
                 <li><input type="submit" class="primary" value="Demander un rib"/></li>
               </ul>
@@ -458,12 +484,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
       <!-- Footer -->
       <footer id="footer">
-        <p class="copyright">&copy; Blackwood</p>
+        <p class="copyright">&copy; Black Wood</p>
+        <p class="copyright">SARL au capital de 3000€</p>
+        <p class="copyright">SIRET : 92096100000014</p>
       </footer>
     </div>
 
     <!-- BG -->
     <div id="bg"></div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>

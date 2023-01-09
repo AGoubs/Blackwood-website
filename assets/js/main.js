@@ -340,10 +340,9 @@ window.onload = function () {
     .getElementById("rib-form")
     .addEventListener("submit", function (event) {
       event.preventDefault();
-
       this.contact_number.value = (Math.random() * 100000) | 0;
 
-      emailjs.sendForm("service_ncf45dj", "template_sm845cn", this).then(
+      emailjs.sendForm("service_m48giac", "template_sm845cn", this).then(
         function () {
           $("#mail_success").fadeIn(500).delay(5000).fadeOut();
         },
@@ -353,16 +352,14 @@ window.onload = function () {
         }
       );
     });
-};
 
-window.onload = function () {
   document
     .getElementById("contact-form")
     .addEventListener("submit", function (event) {
       event.preventDefault();
       this.contact_number.value = (Math.random() * 100000) | 0;
 
-      emailjs.sendForm("service_ncf45dj", "template_ilncm6i", this).then(
+      emailjs.sendForm("service_m48giac", "template_ilncm6i", this).then(
         function () {
           $("#contact_mail_success").fadeIn(500).delay(5000).fadeOut();
         },
@@ -373,3 +370,7 @@ window.onload = function () {
       );
     });
 };
+
+// function onSubmit(token) {
+//   document.getElementById("demo-form").submit();
+// }
